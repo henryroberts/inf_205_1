@@ -43,7 +43,7 @@
                     <td><?php echo $rows['ten_sp']; ?></td>
                     <td><?php echo $rows['gia_sp']; ?></td>
                     <td><?php echo $rows['mo_ta']; ?></td>
-                    <td><a href="#">Sửa</a></td>
+                    <td><a href="sua.php?ma_sp=<?php echo $rows['ma_sp']; ?>">Sửa</a></td>
                     <td><a href="delete.php?ma_sp=<?php echo $rows['ma_sp']; ?>">Xóa</a></td>
                 </tr>
                 <?php } ?>

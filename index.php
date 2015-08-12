@@ -22,8 +22,8 @@
             <table border="1">
                 <thead>
                 <tr>
-                    <th>Mã sản phẩm</th>
-                    <th>Mã loại</th>
+                    <th>ID sản phẩm</th>
+                    <th>ID loại sản phẩm</th>
                     <th>Tên sản phẩm</th>
                     <th>Giá sản phẩm</th>
                     <th>Mô tả sản phẩm</th>
@@ -38,13 +38,13 @@
                 while ($rows = mysql_fetch_array($query)) {
                 ?>
                 <tr>
-                    <td><?php echo $rows['ma_sp']; ?></td>
-                    <td><?php echo $rows['ma_loai']; ?></td>
+                    <td><?php echo $rows['id_san_pham']; ?></td>
+                    <td><?php echo $rows['id_loai_sp']; ?></td>
                     <td><?php echo $rows['ten_sp']; ?></td>
-                    <td><?php echo $rows['gia_sp']; ?></td>
+                    <td><?php echo $rows['ga_sp']; ?></td>
                     <td><?php echo $rows['mo_ta']; ?></td>
-                    <td><a href="sua.php?ma_sp=<?php echo $rows['ma_sp']; ?>">Sửa</a></td>
-                    <td><a href="delete.php?ma_sp=<?php echo $rows['ma_sp']; ?>">Xóa</a></td>
+                    <td><a href="sua.php?id_san_pham=<?php echo $rows['id_san_pham']; ?>">Sửa</a></td>
+                    <td><a href="delete.php?id_san_pham=<?php echo $rows['id_san_pham']; ?>">Xóa</a></td>
                 </tr>
                 <?php } ?>
                 </tbody>

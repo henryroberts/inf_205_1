@@ -6,11 +6,10 @@
 </head>
 <?php
 include_once("connect.php");
-$ma_sp = $_GET['ma_sp'];
-$sql = "DELETE FROM san_pham WHERE ma_sp ='".$ma_sp."'";
-echo $sql;
+$id_sp = $_GET['id_san_pham'];
+$sql = "DELETE FROM san_pham WHERE id_san_pham = $id_sp ";
 mysql_query($sql);
-//header("location: index.php");
+header("location: index.php");
 ?>
 <body>
 </body>

@@ -7,12 +7,12 @@
 <?php
 if(isset($_POST['submit'])){
 	include_once("connect.php");
-	$ma_sp = $_POST["ma_sp"];
-	$ma_loai = $_POST["ma_loai"];
+	$id_san_pham = $_POST["id_san_pham"];
+	$id_loai_sp = $_POST["id_loai_sp"];
 	$ten_sp = $_POST["ten_sp"];
-	$gia_sp = $_POST["gia_sp"];
+	$ga_sp = $_POST["ga_sp"];
 	$mo_ta = $_POST["mo_ta"];
-	$sql = "INSERT INTO san_pham (ma_sp, ma_loai, ten_sp, gia_sp, mo_ta) VALUES ('$ma_sp', '$ma_loai', '$ten_sp', '$gia_sp', '$mo_ta')";
+	$sql = "INSERT INTO san_pham (id_loai_sp,ten_sp, ga_sp, mo_ta) VALUES ($id_loai_sp, '$ten_sp', '$ga_sp', '$mo_ta')";
 	mysql_query($sql);
 	header("location: index.php");
 	}
@@ -30,10 +30,10 @@ if(isset($_POST['submit'])){
         </thead>
         <tbody>
             <tr>
-                <td><input type="text" name="ma_sp" /></td>
-                <td><input type="text" name="ma_loai" /></td>
+                <td><input type="text" name="id_san_pham" /></td>
+                <td><input type="text" name="id_loai_sp" /></td>
                 <td><input type="text" name="ten_sp" /></td>
-                <td><input type="text" name="gia_sp" /></td>
+                <td><input type="text" name="ga_sp" /></td>
                 <td><input type="text" name="mo_ta" /></td>
             </tr>
         </tbody>

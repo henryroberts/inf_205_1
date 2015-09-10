@@ -23,7 +23,7 @@
                 <thead>
                 <tr>
                     <th>ID sản phẩm</th>
-                    <th>ID loại sản phẩm</th>
+                    <th>Tên loại</th>
                     <th>Tên sản phẩm</th>
                     <th>Giá sản phẩm</th>
                     <th>Mô tả sản phẩm</th>
@@ -33,13 +33,13 @@
                 <tbody>
                 <?php
 				include_once("connect.php");
-                $sql = "SELECT * FROM san_pham";
+                $sql = "SELECT * FROM san_pham INNER JOIN loai_sp ON loai_sp.id_loai_sp=san_pham.id_loai_sp";
                 $query = mysql_query($sql);
                 while ($rows = mysql_fetch_array($query)) {
                 ?>
                 <tr>
                     <td><?php echo $rows['id_san_pham']; ?></td>
-                    <td><?php echo $rows['id_loai_sp']; ?></td>
+                    <td><?php echo $rows['ten_loai']; ?></td>
                     <td><?php echo $rows['ten_sp']; ?></td>
                     <td><?php echo $rows['ga_sp']; ?></td>
                     <td><?php echo $rows['mo_ta']; ?></td>

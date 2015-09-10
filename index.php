@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Quản lý sản phẩm</title>
-    <link href="style/style.less" rel="stylesheet/less" type="text/css" />
-    <script language="JavaScript" src="js/less.min.js"></script>
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+    <!-- <link href="style/style.less" rel="stylesheet/less" type="text/css" />
+    <script type="text/javascript" src="js/less.min.js"></script> -->
 </head>
 <body>
-<div id="wrapper">
+<section id="wrapper">
     <aside>
         <h3>Category</h3>
         <ul>
@@ -32,25 +33,25 @@
                 </thead>
                 <tbody>
                 <?php
-				include_once("connect.php");
+                include_once("connect.php");
                 $sql = "SELECT * FROM san_pham INNER JOIN loai_sp ON loai_sp.id_loai_sp=san_pham.id_loai_sp";
                 $query = mysql_query($sql);
                 while ($rows = mysql_fetch_array($query)) {
-                ?>
-                <tr>
-                    <td><?php echo $rows['id_san_pham']; ?></td>
-                    <td><?php echo $rows['ten_loai']; ?></td>
-                    <td><?php echo $rows['ten_sp']; ?></td>
-                    <td><?php echo $rows['ga_sp']; ?></td>
-                    <td><?php echo $rows['mo_ta']; ?></td>
-                    <td><a href="sua.php?id_san_pham=<?php echo $rows['id_san_pham']; ?>">Sửa</a></td>
-                    <td><a href="delete.php?id_san_pham=<?php echo $rows['id_san_pham']; ?>">Xóa</a></td>
-                </tr>
+                    ?>
+                    <tr>
+                        <td><?php echo $rows['id_san_pham']; ?></td>
+                        <td><?php echo $rows['ten_loai']; ?></td>
+                        <td><?php echo $rows['ten_sp']; ?></td>
+                        <td><?php echo $rows['ga_sp']; ?></td>
+                        <td><?php echo $rows['mo_ta']; ?></td>
+                        <td><a href="sua.php?id_san_pham=<?php echo $rows['id_san_pham']; ?>">Sửa</a></td>
+                        <td><a href="delete.php?id_san_pham=<?php echo $rows['id_san_pham']; ?>">Xóa</a></td>
+                    </tr>
                 <?php } ?>
                 </tbody>
             </table>
         </form>
     </article>
-</div><!--end wrapper-->
+</section>
 </body>
 </html>

@@ -21,7 +21,6 @@ if(isset($_POST['submit'])){
     <table border="1">
         <thead>
         <tr>
-            <th>Mã sản phẩm</th>
             <th>Mã loại</th>
             <th>Tên sản phẩm</th>
             <th>Giá sản phẩm</th>
@@ -30,7 +29,6 @@ if(isset($_POST['submit'])){
         </thead>
         <tbody>
             <tr>
-                <td><input type="text" name="id_san_pham" /></td>
                 <td><input type="text" name="id_loai_sp" /></td>
                 <td><input type="text" name="ten_sp" /></td>
                 <td><input type="text" name="ga_sp" /></td>

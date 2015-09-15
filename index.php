@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <title>Quản lý sản phẩm</title>
     <link href="style/style.css" rel="stylesheet" type="text/css">
-    <!-- <link href="style/style.less" rel="stylesheet/less" type="text/css" />
-    <script type="text/javascript" src="js/less.min.js"></script> -->
 </head>
 <body>
 <section id="wrapper">
